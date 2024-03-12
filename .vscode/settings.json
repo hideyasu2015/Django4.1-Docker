@@ -1,0 +1,40 @@
+{
+  // django-htmlのFormatter設定
+  "[django-html]": {
+    "editor.defaultFormatter": "HookyQR.beautify",
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false
+  },
+  "files.associations": {
+    "**/templates/**/*.html": "django-html",
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "beautify.language": {
+    "html": [
+      "htm",
+      "html",
+      "django-html"
+    ],
+    "css": {}
+  },
+  // pythonのFormatter設定
+  "python.formatting.provider": "none",
+  "python.formatting.autopep8Args": [
+    "--indent-size=4"
+  ],
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  // django-htmlのEmmet設定
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  // pythonの型チェック
+  "python.analysis.typeCheckingMode": "basic",
+}

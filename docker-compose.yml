@@ -1,0 +1,37 @@
+# 開発環境用
+
+version: '3'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: channels-test
+    working_dir: /back_code
+    tty: true
+    volumes:
+      - .:/back_code
+
+    # ================= docker起動時 =================
+    # command: >
+    #   bash -c "rm -f /back_code/db.sqlite3
+    #   && python manage.py migrate
+    #   && python3 manage.py collectstatic --noinput
+    #   && python manage.py createsuperuser --noinput
+    #   && yarn install
+    #   && bash"
+    environment:
+      PYTHONPATH: /usr/local/bin/python
+      # 本番で、Dockerfileに書く環境変数 settingsファイルを決定
+      # DJANGO_SETTINGS_MODULE: config.settings.develop
+      # GOOGLE_APPLICATION_CREDENTIALS:
+      # 本番で、Cloud Runに書く環境変数
+      # DJANGO_SUPERUSER_EMAIL: [admin_email]
+      # DJANGO_SUPERUSER_PASSWORD: [password]
+      # DJANGO_SUPERUSER_USERNAME: [your adminuser name]
+
+    # command: python3 manage.py runserver 0.0.0.0:8000
+
+    ports:
+      - '8000:8000'
