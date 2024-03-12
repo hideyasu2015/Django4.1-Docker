@@ -1,11 +1,19 @@
+# Django の Docker での開発環境になります。
+
+ご自由にお使いください。
+
 ## 起動方法
+
+- docker アプリを起動する。
+
+- ターミナルでフォルダに移動し
 
 ```
 docker-compose up
 
 ```
 
-- 仮想環境下にて、back_code へ移動する
+- 仮想環境下にて、`back_code` へ移動する
 - Django プロジェクトを作成する
 - 注意 このリポジトリにはすでに app_config というプロジェクトが作成されています。
 
@@ -38,3 +46,5 @@ $ python manage.py runserver 0.0.0.0:8000
 - Firebase
 - GCP
 - Numpy
+- Node.js ver18.4
+- DRF
